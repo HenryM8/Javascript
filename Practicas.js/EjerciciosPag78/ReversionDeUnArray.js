@@ -22,10 +22,10 @@ console.log(reverseArray(['hola', 0, 1, 2, 3, 4, 5, 6, 'adiós']))
 
 function reverseArrayInPlace(array) {
   arrayInverso = []
-  for (let contador = 0; contador < array.length; contador++) {
-    arrayInverso.unshift(array[contador])
+  for (let contador = array.length - 1; contador >= 0; contador--) {
+    arrayInverso.push(array[contador])
   }
-  array.length = 0
+
   array = arrayInverso
   return array
 }
